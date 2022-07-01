@@ -3,7 +3,6 @@
 #include <time.h>
 /**
  * main - Prints all possible combinations of a pair of
- * 
  * Return: Always 0
  */
 int main(void)
