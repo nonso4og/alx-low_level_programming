@@ -2,33 +2,33 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Prints all possible combinations of a pair of
+ * main - Entry point
+ *
  * Return: Always 0
  */
 int main(void)
 {
-	int i, j;
+	int p, q;
 
-	for (i = 0; i <= 98; i++)
+	for (p = 0; p <= 98; p++)
 	{
-
-		for (j = 0; j <= 99; j++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			if (i < j && i != j)
-			{
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
 
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
-				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j % 10) + '0');
-				if (i != 98 || j != 99)
-					putchar(',');
-					putchar(' ');
-			}
+			if (p == 98 && q == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
-
